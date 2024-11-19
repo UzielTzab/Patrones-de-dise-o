@@ -1,16 +1,16 @@
 
 import CardPatrones from './components/CardPatrones';
-import { FaEye, FaBox, FaChartBar, FaBath } from 'react-icons/fa';
+import { FaEye, FaBox, FaChartBar, FaBath, FaChalkboardTeacher, FaAcquisitionsIncorporated } from 'react-icons/fa';
 
 function App() {
 
   const patrones = [
-    { name: 'Observer', description: 'Simulación de un Stock en disminución que es escuchada por otros componentes', route: '/observer', icon: <FaEye size={24} color="blue" /> },
-    { name: 'Singleton', description: 'Descripción del Patrón 2', route: '/observer', icon: <FaBath size={24} color="green" /> },
+    { name: 'Observer', description: 'Simulación de un Stock en disminución que es escuchada por otros componentes', route: '/observer', icon: <FaEye size={24} color="cyan" /> },
+    { name: 'Singleton', description: 'Descripción del Patrón 2', route: '/singleton', icon: <FaBox size={24} color="green" /> },
     { name: 'Strategy', description: 'Simulación de tipo de envío deseado', route: '/strategy', icon: <FaChartBar size={24} color="yellow" /> },
-    { name: 'Patrón 4', description: 'Descripción del Patrón 4', route: '/about/pattern4', icon: <FaBox size={24} color="green" /> },
-    { name: 'Patrón 5', description: 'Descripción del Patrón 5', route: '/about/pattern5', icon: <FaEye size={24} color="blue" /> },
-    { name: 'Patrón 6', description: 'Descripción del Patrón 6', route: '/about/pattern6', icon: <FaBox size={24} color="green" /> },
+    { name: 'Command', description: 'Simulación de deshacer y rehacer cambios', route: '/command', icon: <FaChalkboardTeacher size={24} color="red" /> },
+    { name: 'Patrón 5', description: 'Descripción del Patrón 5', route: '/about/pattern5', icon: <FaEye size={24} color="pink" /> },
+    { name: 'Patrón 6', description: 'Descripción del Patrón 6', route: '/about/pattern6', icon: <FaAcquisitionsIncorporated size={24} color="purple" /> },
   ];
 
   return (

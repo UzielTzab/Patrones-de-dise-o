@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { useNavigate } from 'react-router-dom';
+import {FaCalculator} from 'react-icons/fa';
 
 interface ShippingStrategy {
   calculateCost: (packageValue: number) => number;
@@ -62,11 +63,16 @@ const StrategyPage: React.FC = () => {
           {errorMessage}
         </div>
       )}
-      <h1 className="text-2xl font-bold mb-6">Calculadora de Envío</h1>
+      <div className=" flex p-5">
+        <FaCalculator className="text-4xl text-yellow-500 p-1" />
+        <h1 className="text-2xl font-bold mb-6">Calculadora de Envío</h1>
+      </div>
+      <p className="pl-40 pr-40 text-center mb-4">El formulario pide unicamente el valor del paquete y el tipo de envió a realizar, internamente es mas mantenible a nivel algorítmico, ya que cada tipo de envío cuenta con una clase.</p>
+    
       
       <div className="bg-yellow-500 shadow-md rounded-md p-6 w-96">
         <div className="mb-4">
-          <label className="block text-gray-700 mb-2">Valor del paquete ($):</label>
+          <label className="block text-yellow-950 font-bold mb-2">Valor del paquete ($):</label>
           <input
             type="number"
             onChange={(e) => setPackageValue(Number(e.target.value))}
@@ -76,7 +82,7 @@ const StrategyPage: React.FC = () => {
         </div>
 
         <div className="mb-4">
-          <label className="block text-gray-700 mb-2">Tipo de envío:</label>
+          <label className="block text-yellow-950 font-bold mb-2">Tipo de envío:</label>
           <select
             value={shippingType}
             onChange={(e) => setShippingType(e.target.value)}

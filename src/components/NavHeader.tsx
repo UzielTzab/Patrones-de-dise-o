@@ -27,28 +27,7 @@ function NavHeader() {
                 </a>
                
               </li>
-              <li className="relative group">
-              <a className="text-yellow-500 transition duration-300">
-                Team
-              </a>
-              <ul className="absolute hidden group-hover:block bg-black text-yellow-500 shadow-md mt-2">
-                <li>
-                  <a href="/team/member1" className="block px-4 py-2 hover:bg-yellow-500 hover:text-black transition duration-300">
-                    Uziel Alejandro Tzab Puc
-                  </a>
-                </li>
-                <li>
-                  <a href="/team/member2" className="block px-4 py-2 hover:bg-yellow-500 hover:text-black transition duration-300">
-                    Jonathan Obrian
-                  </a>
-                </li>
-                <li>
-                  <a href="/team/member3" className="block px-4 py-2 hover:bg-yellow-500 hover:text-black transition duration-300">
-                    Cristian Abán
-                  </a>
-                </li>
-              </ul>
-            </li>
+           
             </ul>
           </nav>
         </div>
