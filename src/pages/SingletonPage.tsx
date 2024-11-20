@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import ConfigService from "./SingletonLogic";
+import ButtonReturnToMenu from "../components/ButtonReturnToMenu";
 
 export function SingletonPattern() {
   const [settings, setSettings] = useState<Record<string, string | number | boolean>>({});
@@ -26,7 +27,8 @@ export function SingletonPattern() {
   };
 
   return (
-    <div className="min-h-screen flex flex-col items-center justify-center bg-gradient-to-r from-blue-50 to-blue-100">
+    <>
+     <div className="min-h-screen flex flex-col items-center justify-center bg-gradient-to-r from-blue-50 to-blue-100">
       <div className="w-full max-w-md bg-white shadow-lg rounded-lg p-6">
         <h1 className="text-2xl font-bold text-gray-800 text-center mb-6">Patrón Singleton en React</h1>
         <h2 className="text-lg font-semibold text-gray-600 mb-4">Valor de la configuración:</h2>
@@ -67,6 +69,10 @@ export function SingletonPattern() {
           </div>
         </div>
       </div>
+      <ButtonReturnToMenu/>
     </div>
+   
+    </>
+   
   );
 };

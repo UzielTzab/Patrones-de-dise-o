@@ -1,4 +1,3 @@
-// CounterContext.tsx
 import React, { createContext, useState, useContext, ReactNode, useEffect } from 'react';
 
 interface CounterContextProps {
@@ -17,7 +16,7 @@ export const CounterProvider: React.FC<{ children: ReactNode }> = ({ children })
 
   useEffect(() => {
     const interval = setInterval(decrement, 3000);
-    return () => clearInterval(interval); // Limpiar el intervalo al desmontar el componente
+    return () => clearInterval(interval); 
   }, []);
 
   return (

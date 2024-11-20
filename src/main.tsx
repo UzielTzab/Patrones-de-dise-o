@@ -5,13 +5,16 @@ import { AnimatePresence, motion } from 'framer-motion';
 import './index.css';
 
 import App from './App';
-import CounterPage from './pages/CounterPage';
+import CounterPage from './pages/ObserverPage';
 import { CounterProvider } from './pages/CounterContext';
 import NavHeader from './components/NavHeader';
 import StrategyPage from './pages/StrategyPage';
 import CommandPage from './pages/CommandPage';
 import FooterMain from './components/FooterMain';
 import { SingletonPattern } from './pages/SingletonPage';
+import StructurePage from './pages/BridgePage';
+import ObserverPage from './pages/ObserverPage';
+import BridgePage from './pages/BridgePage';
 
 function RouteComponent() {
   const location = useLocation();
@@ -36,7 +39,7 @@ function RouteComponent() {
             animate={{ opacity: 1, y: 0, transition: { duration: 1 } }}
             exit={{ opacity: 0, y: -1000 }}
           >
-            <CounterPage />
+            <ObserverPage />
           </motion.div>
         } />
         <Route path='/strategy' element={
@@ -59,16 +62,7 @@ function RouteComponent() {
             <CommandPage />
           </motion.div>
         } />
-           <Route path='/strategy' element={
-          <motion.div
-            className="min-h-screen flex flex-col w-full"
-            initial={{ opacity: 0, x: 1000 }}
-            animate={{ opacity: 1, x: 0, transition: { duration: 1 } }}
-            exit={{ opacity: 0, x: -1000 }}
-          >
-            <StrategyPage />
-          </motion.div>
-        } />
+          
          <Route path='/singleton' element={
           <motion.div
             className="min-h-screen flex flex-col w-full"
@@ -77,6 +71,16 @@ function RouteComponent() {
             exit={{ opacity: 0, x: -1000 }}
           >
             <SingletonPattern />
+          </motion.div>
+        } />
+         <Route path='/bridge' element={
+          <motion.div
+            className="min-h-screen flex flex-col w-full"
+            initial={{ opacity: 0, x: 1000 }}
+            animate={{ opacity: 1, x: 0, transition: { duration: 1 } }}
+            exit={{ opacity: 0, x: -1000 }}
+          >
+            <BridgePage />
           </motion.div>
         } />
       </Routes>

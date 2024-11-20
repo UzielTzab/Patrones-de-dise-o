@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { useNavigate } from 'react-router-dom';
 import {FaCalculator} from 'react-icons/fa';
+import ButtonReturnToMenu from "../components/ButtonReturnToMenu";
 
 interface ShippingStrategy {
   calculateCost: (packageValue: number) => number;
@@ -53,7 +54,7 @@ const StrategyPage: React.FC = () => {
     const shippingStrategy = shippingStrategies[shippingType];
     const cost = shippingStrategy.calculateCost(packageValue);
     setTotalCost(cost + packageValue);
-    setErrorMessage(""); // Limpiar el mensaje de error si todo está bien
+    setErrorMessage("");
   };
 
   return (
@@ -67,7 +68,7 @@ const StrategyPage: React.FC = () => {
         <FaCalculator className="text-4xl text-yellow-500 p-1" />
         <h1 className="text-2xl font-bold mb-6">Calculadora de Envío</h1>
       </div>
-      <p className="pl-40 pr-40 text-center mb-4">El formulario pide unicamente el valor del paquete y el tipo de envió a realizar, internamente es mas mantenible a nivel algorítmico, ya que cada tipo de envío cuenta con una clase.</p>
+      <p className="pl-80 pr-80 text-center mb-10">El formulario pide únicamente el valor del paquete y el tipo de envió a realizar, internamente es mas mantenible a nivel algorítmico, ya que cada tipo de envío cuenta con una clase.</p>
     
       
       <div className="bg-yellow-500 shadow-md rounded-md p-6 w-96">
@@ -108,12 +109,7 @@ const StrategyPage: React.FC = () => {
           <p>Costo total a pagar: <strong>${totalCost.toFixed(2)}</strong></p>
         </div>
       )}
-      <button
-        className="bg-yellow-500 text-black px-4 py-2 mt-4"
-        onClick={() => navigate('/')}
-      >
-        Ir al menú principal
-      </button>
+      <ButtonReturnToMenu/>
     </div>
   );
 };
