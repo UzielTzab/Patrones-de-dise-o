@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import ConfigService from "./SingletonLogic";
+import ConfigService from "../logic/SingletonLogic";
 import ButtonReturnToMenu from "../components/ButtonReturnToMenu";
 
 export function SingletonPattern() {

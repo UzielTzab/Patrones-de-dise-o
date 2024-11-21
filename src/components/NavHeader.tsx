@@ -1,4 +1,4 @@
-import { useCounter } from "../pages/CounterContext";
+import { useCounter } from "../logic/CounterContext";
 import { FaBox } from "react-icons/fa";
 
 function NavHeader() {
@@ -11,7 +11,9 @@ function NavHeader() {
             <ul className="flex space-x-4 ">
               <li className=" flex content-center">
                 <FaBox className="  mr-3" />
-                <p className="text-yellow-500">Stock: {count}</p>
+                <p className={` text-yellow-500 ${count === 0 ? 'text-red-500' : ''}`}>
+          Stock: {count} u
+        </p>
               </li>
               <li>
                 <a

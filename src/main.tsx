@@ -6,7 +6,7 @@ import './index.css';
 
 import App from './App';
 import CounterPage from './pages/ObserverPage';
-import { CounterProvider } from './pages/CounterContext';
+import { CounterProvider } from './logic/CounterContext';
 import NavHeader from './components/NavHeader';
 import StrategyPage from './pages/StrategyPage';
 import CommandPage from './pages/CommandPage';

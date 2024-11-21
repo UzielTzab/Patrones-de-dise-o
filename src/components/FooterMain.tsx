@@ -1,6 +1,6 @@
 import React from 'react';
 import { FaFacebook, FaTwitter, FaInstagram, FaLinkedin } from 'react-icons/fa';
-import { useCounter } from "../pages/CounterContext";
+import { useCounter } from "../logic/CounterContext";
 const FooterMain: React.FC = () => {
     const { count } = useCounter();
     return (
